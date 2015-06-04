@@ -1,0 +1,8 @@
+{
+    "require": {
+        "intervention/image": "dev-master",
+        "twig/twig": "2.0.*@dev",
+        "oyejorge/less.php": "~1.5"
+
+    }
+}

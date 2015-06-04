@@ -1,0 +1,5 @@
+﻿Header set Access-Control-Allow-Origin *
+
+#
+# AliasMatch ^/crea-template$ /Quadri/Quadri/text.php
+# AliasMatch ^/image/(.*)\.gif$ /files/gif.images/$1.gif 
