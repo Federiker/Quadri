@@ -129,7 +129,7 @@
         {% endif %}
         {% if options.spedizioni or options.spedizioni_text %}
         <h2 id="painting-info-shipping">{{options.spedizioni}}</h2>
-        <img class="sda-logo" src="http://www.federicopirani.com/Quadri/sda.png" />
+        <img class="sda-logo" src="//www.federicopirani.com/Quadri/sda.png" />
         <div id="painting-info-shipping-value">
             {% for p in options.spedizioni_text|split('\n\n') %}
             <p>{{p|replace({'[b]':'<strong>', '[/b]':'</strong>'})|raw|nl2br}}</p>

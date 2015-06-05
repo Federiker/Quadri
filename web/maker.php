@@ -75,7 +75,7 @@ $twig = new Twig_Environment($loader, array(
 ));
 
 $parser = new Less_Parser(array("compress" => true));
-$parser->parseFile( 'style.less', '/Quadri/' );
+$parser->parseFile( 'style.less', '.' );
 $parser->ModifyVars( array('ratio'=>$ratio, "bck-size" => $bckSize) );
 $css = $parser->getCss();
 $vals = array(
