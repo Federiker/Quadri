@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        form {
+            width: 80%;
+            margin: auto;
+        }
+        form > p > input {
+            width: 100%;
+        }
+        form > p > textarea {
+            width: 100%;
+            height: 200px;
+        }
+        p {
+            border-bottom: 2px green solid;
+        }
+    </style>
+</head>
+<body>
+    <form action="savetemplate.php" method="post">
+        <p>
+            Logo: <br /><input name="logo" type="text" value="{{options.logo}}" />
+        </p>
+        <p>
+            Di: <br /><input name="di" type="text" value="{{options.di}}" />
+        </p>
+        <p>
+            Intestazione: <br /><input name="titolone" type="text" value="{{options.titolone}}" />
+        </p>
+        <p>
+            Sottotitolo: <br /><input name="sottotitolo" type="text" value="{{options.sottotitolo}}" />
+        </p>
+        <p>
+            Sottotitolo2: <br /><input name="sottotitolo2" type="text" value="{{options.sottotitolo2}}" />
+        </p>
+        <!-- Right -->
+        <p>
+            Autore:<br /> <input name="autore" type="text" value="{{options.autore}}" />
+        </p>
+        <p>
+            Titolo: <br /><input name="titolo" type="text" value="{{options.titolo}}" />
+        </p>
+        <p>
+            Anno dipinto: <br /><input name="year_text" type="text" value="{{options.year_text}}" />
+        </p>
+        <p>
+            Codice prodotto: <br /><input name="code_text" type="text" value="{{options.code_text}}" />
+        </p>
+        <p>
+            Dimensioni: <br /><input name="dimensioni" type="text" value="{{options.dimensioni}}" />
+        </p>
+        <!-- Lower -->
+        <p>
+            Telaio: <br /><input name="telaio" type="text" value="{{options.telaio}}" />
+        </p>
+        <p>
+            Telaio text: <br /><textarea name="telaio_text">{{options.telaio_text}}</textarea>
+        </p>
+        <p>
+            Garanzia: <br /><input name="garanzia" type="text" value="{{options.garanzia}}" />
+        </p>
+        <p>
+            Garanzia text: <br /><textarea name="garanzia_text">{{options.garanzia_text}}</textarea>
+        </p>
+        <p>
+            Spedizione: <br /><input name="spedizioni" type="text" value="{{options.spedizioni}}" />
+        </p>
+        <p>
+            Spedizione text: <br /><textarea name="spedizioni_text">{{options.spedizioni_text}}</textarea>
+        </p>
+        <p>
+            Pagamenti: <br /><input name="pagamenti" type="text" value="{{options.pagamenti}}" />
+        </p>
+        <p>
+            Pagamenti text: <br /><textarea name="pagamenti_text">{{options.pagamenti_text}}</textarea>
+        </p>
+        <p>
+            Rimborso: <br /><input name="rimborso" type="text" value="{{options.rimborso}}" />
+        </p>
+        <p>
+            Rimborso text: <br /><textarea name="rimborso_text">{{options.rimborso_text}}</textarea>
+        </p>
+        <p>
+            Contatti: <br /><input name="contatti" type="text" value="{{options.contatti}}" />
+        </p>
+        <p>
+            Contatti text: <br /><textarea name="contatti_text">{{options.contatti_text}}</textarea>
+        </p>
+        <p>
+            Nome del template: <br /><input type="text" name="fname" value="{{options.fname}}" />
+        </p>
+        <p>
+            <input type="submit" value="Carica" />
+        </p>
+    </form>
+</body>
+</html>
