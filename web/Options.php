@@ -1,5 +1,5 @@
 <?php
-define("DEFAULT_LOGO", "http://www.federicopirani.com/Quadri/logo.jpg");
+define("DEFAULT_LOGO", "https://dry-journey-4380.herokuapp.com/logo.jpg");
 /**
  * Options short summary.
  *
@@ -236,4 +236,13 @@ function cleanup_files($ext) {
             unlink($file);
         }
     }
+}
+
+function clean_file_title(&$n, $title) {
+    $title = preg_replace("/[^a-zA-Z\\s0-9]/", "", trim($title));
+    $title = str_replace(" ", "_", $title);
+    if (strlen(trim($title)) == 0) {
+        return;
+    }
+    $n = $title;
 }

@@ -39,6 +39,7 @@ if ($norepet) {
     $bckSize = "117%";
 }
 $n = time();
+clean_file_title($n, $title);
 try {
     cleanup_files("jpg");
     cleanup_files("txt");
