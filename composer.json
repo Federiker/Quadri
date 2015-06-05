@@ -1,11 +1,13 @@
 {
     "require": {
-        "intervention/image": "dev-master",
+        "intervention/image": "2.2.1",
         "twig/twig": "2.0.*@dev",
         "oyejorge/less.php": "~1.5",
         "silex/silex": "~1.1",
          "monolog/monolog": "~1.7",
-         "gd": "*"
+         "ext-gd": "*",
+         "ext-fileinfo": "*",
+         "ext-imagick": "*"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
