@@ -81,6 +81,13 @@
         {% if options.telaio %}
         <h2>{{options.telaio}}</h2>
         {% endif %}
+        {% if options.telaio_text %}
+        <div>
+            {% for p in options.telaio_text|split('\n\n') %}
+            <p>{{p|replace({'[b]':'<strong>', '[/b]':'</strong>'})|raw|nl2br}}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
         {% if show_3d %}
         <!-- #region 3D -->
         <div id="tridiv">
@@ -109,13 +116,6 @@
         </div>
         {% endif %}
         <!-- #endregion -->
-        {% if options.telaio_text %}
-        <div>
-            {% for p in options.telaio_text|split('\n\n') %}
-            <p>{{p|replace({'[b]':'<strong>', '[/b]':'</strong>'})|raw|nl2br}}</p>
-            {% endfor %}
-        </div>
-        {% endif %}
         {% if show_3d %}
         <div class="breaker"></div>
         {% endif %}
