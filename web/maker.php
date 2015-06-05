@@ -4,7 +4,7 @@ define("CONT_W", 450);
 //http://www.federicopirani.com/Quadri/paintings/GK60900007.jpg
 //http://www.federicopirani.com/Quadri/paintings/guardians.jpg
 //http://upload.wikimedia.org/wikipedia/commons/d/d4/Paul_C%C3%A9zanne%2C_1892-95%2C_Les_joueurs_de_carte_%28The_Card_Players%29%2C_60_x_73_cm%2C_oil_on_canvas%2C_Courtauld_Institute_of_Art%2C_London.jpg
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require_once "Options.php";
 $loader = new Twig_Loader_Filesystem(".");
 use Intervention\Image;

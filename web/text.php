@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 require_once "Options.php";
 $loader = new Twig_Loader_Filesystem(".");
 $twig = new Twig_Environment($loader, array(
