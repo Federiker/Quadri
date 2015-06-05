@@ -1,5 +1,7 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
-RewriteRule "^template" text.php [QSA,L]
-
+RewriteRule ^ index.php [QSA]
+RewriteRule "^template" text.php [QSA]
+RewriteRule "^save-template" savetemplate.php [QSA]
+RewriteRule "^create" makeme.php [QSA]
+RewriteRule "^done" maker.php [QSA]
