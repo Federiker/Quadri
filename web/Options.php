@@ -30,7 +30,7 @@ class Options
     
     
 	
-	public $logo = "http://www.federicopirani.com/Quadri/logo.jpg";
+	public $logo = "https://dry-journey-4380.herokuapp.com/logo.jpg";
 	
     public $fname = "default";
 	
@@ -45,7 +45,7 @@ class Options
 	
 	public $telaio = "Telaio";
 	
-	public $telaio_text = "blabla";
+	public $telaio_text = "";
 	
 	public $garanzia = "Garanzia";
 	

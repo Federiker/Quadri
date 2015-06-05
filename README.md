@@ -4,8 +4,8 @@
 ## Template ##
 
 Per creare un template dove inserire il testo e le etichette di "pagamenti", "contatti", ecc, usa il link
- [/text.php](http://federicopirani.com/Quadri/text.php); per modificare un template esistente 
- invece [/text.php?fname=default](http://federicopirani.com/Quadri/text.php?fname=default) dove `default` è il nome del file.
+ [/template](https://dry-journey-4380.herokuapp.com/template); per modificare un template esistente 
+ invece [/template?fname=default](https://dry-journey-4380.herokuapp.com/template?fname=default) dove `default` è il nome del file.
 
 Se non vuoi una sezione basta lasciare l'etichetta e il contenuto vuoti.
 
@@ -13,7 +13,7 @@ Una volta inseriti tutti i dati clicca su `carica`.
 
 ## Creare una pagina ##
 
-Per creare una pagina vai su [/makeme.php](http://federicopirani.com/Quadri/makeme.php).
+Per creare una pagina vai su [/create](https://dry-journey-4380.herokuapp.com/create).
 
 Inserire il titolo, l'autore, le dimensioni (che comunque se sono vuoti non vengono visualizzate).
 

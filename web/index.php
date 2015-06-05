@@ -17,7 +17,7 @@ $app->get('/', function() use($app) {
   return <<<EOF
     <a href="template">Template</a><br />
     <a href="create">Quadro</a><br />
-  EOF;
+EOF;
 });
 
 $app->run();
