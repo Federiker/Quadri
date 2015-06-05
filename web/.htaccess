@@ -1,5 +1,3 @@
-﻿Header set Access-Control-Allow-Origin *
-
-#
-# AliasMatch ^/crea-template$ /Quadri/Quadri/text.php
-# AliasMatch ^/image/(.*)\.gif$ /files/gif.images/$1.gif 
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
