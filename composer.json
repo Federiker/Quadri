@@ -4,7 +4,8 @@
         "twig/twig": "2.0.*@dev",
         "oyejorge/less.php": "~1.5",
         "silex/silex": "~1.1",
-         "monolog/monolog": "~1.7"
+         "monolog/monolog": "~1.7",
+         "ext-gd": "*"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"
