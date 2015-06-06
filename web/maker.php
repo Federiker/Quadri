@@ -36,7 +36,7 @@ catch (Exception $e) {}
 
 $bckSize = "100%";
 if ($norepet) {
-    $bckSize = "117%";
+    $bckSize = "105%";
 }
 $n = time();
 clean_file_title($n, $title);
