@@ -2,6 +2,6 @@
 paint.url = imgUrl;
 paint.thumbUrl = thumb;
 paint.setResize = resize;
-paint.originalWidth = 470;
-paint.zoomWidth = 200;
+paint.originalWidth = 510;
+paint.zoomWidth = 240;
 paint.paint();
