@@ -1,6 +1,6 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
-define("CONT_W", 450);
+define("CONT_W", 480);
 //http://www.federicopirani.com/Quadri/paintings/GK60900007.jpg
 //http://www.federicopirani.com/Quadri/paintings/guardians.jpg
 //http://upload.wikimedia.org/wikipedia/commons/d/d4/Paul_C%C3%A9zanne%2C_1892-95%2C_Les_joueurs_de_carte_%28The_Card_Players%29%2C_60_x_73_cm%2C_oil_on_canvas%2C_Courtauld_Institute_of_Art%2C_London.jpg
@@ -77,7 +77,7 @@ $twig = new Twig_Environment($loader, array(
 
 $parser = new Less_Parser(array("compress" => true));
 $parser->parseFile( 'style.less', '.' );
-$parser->ModifyVars( array('ratio'=>$ratio, "bck-size" => $bckSize) );
+$parser->ModifyVars( array('ratio'=>$ratio, "bck-size" => $bckSize, "thumb-width" => CONT_W) );
 $css = $parser->getCss();
 $vals = array(
     "title" => $title,
