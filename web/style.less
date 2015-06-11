@@ -1,4 +1,4 @@
-﻿@total-width: 1000px;
+﻿@total-width: 1200px;
 @article-width: 65;
 @title-font-size: 40px;
 @title-color: #000;
@@ -20,11 +20,11 @@
         text-align: center;
     }
     h1 {
-        font: italic 700 @title-font-size/1 "Playfair Display", serif;
+        font: italic 700 @title-font-size/1 "Playfair Display", serif !important;
         color: @title-color;
     }
     h2, h3, h4, h5, h6 {
-        font-family: "Playfair Display", serif;
+        font-family: "Playfair Display", serif !important;
         font-style: italic;
         color: @title-color;
     }
@@ -99,9 +99,9 @@
     margin: 0 auto;
     line-height: 25px;
     text-align: center;
-    p {
-        text-align: justify;
-    }
+    //p {
+        // text-align: justify;
+    //}
     img {
         margin: 10px auto;
     }
