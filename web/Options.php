@@ -238,7 +238,13 @@ function cleanup_files($ext) {
     }
 }
 
-function clean_file_title(&$n, $title) {
+function clean_file_title(&$n, $title, $code = "") {
+    $code = preg_replace("/[^a-zA-Z\\s0-9]/", "", trim($code));
+    $code = str_replace(" ", "_", $code);
+    if (strlen(trim($code)) > 0) {
+        $n = $code;
+        return;
+    }
     $title = preg_replace("/[^a-zA-Z\\s0-9]/", "", trim($title));
     $title = str_replace(" ", "_", $title);
     if (strlen(trim($title)) == 0) {

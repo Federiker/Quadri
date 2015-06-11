@@ -15,7 +15,7 @@ $author = !isset($_POST["author"]) ? "Autore" : trim($_POST["author"]);
 $width = !isset($_POST["width"]) ? 10 : filter_var(trim($_POST["width"]), FILTER_SANITIZE_NUMBER_INT);
 $height = !isset($_POST["height"]) ? 10 : filter_var(trim($_POST["height"]), FILTER_SANITIZE_NUMBER_INT);
 $depth = !isset($_POST["depth"]) ? 2 : filter_var(trim($_POST["depth"]), FILTER_SANITIZE_NUMBER_INT);;
-$code = !isset($_POST["code"]) ? "?" : trim($_POST["code"]);
+$code = !isset($_POST["code"]) ? "" : trim($_POST["code"]);
 $ratio = 1;
 $norepet = !isset($_POST["repeat"]);
 $create = isset($_POST["create"]);
@@ -39,7 +39,7 @@ if ($norepet) {
     $bckSize = "105%";
 }
 $n = time();
-clean_file_title($n, $title);
+clean_file_title($n, $title, $code);
 try {
     cleanup_files("jpg");
     cleanup_files("txt");
