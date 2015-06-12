@@ -85,12 +85,16 @@ $twig = new Twig_Environment($loader, array(
 
 $parser = new Less_Parser(array("compress" => true));
 $parser->parseFile( 'style.less', '.' );
+$mag = MAG_EMPTY_CSS_URL;
+if ($magnify) {
+    $mag = MAG_CSS_URL;
+}
 $parser->ModifyVars(
     array(
         'ratio'=>$ratio, 
         "bck-size" => $bckSize, 
         "thumb-width" => $cont_w,
-        "mag-url" => $magnify ? MAG_CSS_URL : MAG_EMPTY_CSS_URL
+        "mag-url" => $mag
         )
     );
 $css = $parser->getCss();
