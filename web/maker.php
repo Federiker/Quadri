@@ -82,22 +82,28 @@ catch (Exception $e) {
 $twig = new Twig_Environment($loader, array(
     //"cache" => "cache/"
 ));
-
-$parser = new Less_Parser(array("compress" => true));
-$parser->parseFile( 'style.less', '.' );
-$mag = MAG_EMPTY_CSS_URL;
-if ($magnify) {
-    $mag = MAG_CSS_URL;
+try {
+    $parser = new Less_Parser(array("compress" => true));
+    $parser->parseFile( 'style.less', '.' );
+    $mag = MAG_EMPTY_CSS_URL;
+    if ($magnify) {
+        $mag = MAG_CSS_URL;
+    }
+    $parser->ModifyVars(
+        array(
+            "ratio" => $ratio, 
+            "bck-size" => $bckSize, 
+            "thumb-width" => $cont_w,
+            "mag-url" => $mag
+            )
+        );
+    $css = $parser->getCss();
 }
-$parser->ModifyVars(
-    array(
-        'ratio'=>$ratio, 
-        "bck-size" => $bckSize, 
-        "thumb-width" => $cont_w,
-        "mag-url" => $mag
-        )
-    );
-$css = $parser->getCss();
+catch (Exception $le) {
+    $css = "";
+    echo var_dump($le);
+}
+
 $vals = array(
     "title" => $title,
     "year" => $year,
