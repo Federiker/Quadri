@@ -2,8 +2,8 @@
 header("Content-type: text/html; charset=utf-8");
 define("CONT_W", 480);
 //define("CONT_W", 600);
-define("MAG_CSS_URL", "https://dry-journey-4380.herokuapp.com/magnifier.min.css");
-define("MAG_EMPTY_CSS_URL", "https://dry-journey-4380.herokuapp.com/empty.css");
+define("MAG_CSS_URL", "\"https://dry-journey-4380.herokuapp.com/magnifier.min.css\"");
+define("MAG_EMPTY_CSS_URL", "\"https://dry-journey-4380.herokuapp.com/empty.css\"");
 //http://www.federicopirani.com/Quadri/paintings/GK60900007.jpg
 //http://www.federicopirani.com/Quadri/paintings/guardians.jpg
 //http://upload.wikimedia.org/wikipedia/commons/d/d4/Paul_C%C3%A9zanne%2C_1892-95%2C_Les_joueurs_de_carte_%28The_Card_Players%29%2C_60_x_73_cm%2C_oil_on_canvas%2C_Courtauld_Institute_of_Art%2C_London.jpg
@@ -101,7 +101,7 @@ try {
 }
 catch (Exception $le) {
     $css = "";
-    echo var_dump($le);
+    //echo var_dump($le);
 }
 
 $vals = array(
