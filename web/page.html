@@ -38,9 +38,13 @@
         <article class="painting-view">
             <!-- #region painting magnifier -->
             <div class="painting">
-                <a class="magnifier-thumb-wrapper" id="thumb-container" target="_blank" href="#"></a>
                 {% if magnify %}
+                <a class="magnifier-thumb-wrapper" id="thumb-container" target="_blank" href="#"></a>
                 <div class="magnifier-preview heading" id="preview"></div>
+                {% else %}
+                <a class="magnifier-thumb-wrapper" id="thumb-container" target="_blank" href={{img_url|raw}}>
+                        <img id="thumb" src={{img_thumb|raw}} />
+                </a>
                 {% endif %}
             </div>
             <!-- #endregion -->
