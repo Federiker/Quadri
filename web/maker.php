@@ -1,6 +1,8 @@
 <?php
 header("Content-type: text/html; charset=utf-8");
 define("CONT_W", 480);
+define("BODY_W", 1200);
+//@total-width: 1200px;
 //define("CONT_W", 600);
 define("MAG_CSS_URL", "\"https://dry-journey-4380.herokuapp.com/magnifier.min.css\"");
 define("MAG_EMPTY_CSS_URL", "\"https://dry-journey-4380.herokuapp.com/empty.css\"");
@@ -55,8 +57,10 @@ $zip = new ZipArchive();
 $zip->open("public/ebay_{$n}.zip", ZipArchive::CREATE);
 
 $cont_w = CONT_W;
+$body_w = BODY_W;
 if (!$magnify) {
     $cont_w += 120;
+    $body_w -= 100;
 }
 $thumb = null;
 
@@ -93,7 +97,8 @@ try {
         array(
             "ratio" => $ratio, 
             "bck-size" => $bckSize, 
-            "thumb-width" => $cont_w,
+            "thumb-width" => $cont_w . "px",
+            "total-width" => $body_w . "px",
             "mag-url" => $mag
             )
         );
