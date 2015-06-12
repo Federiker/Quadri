@@ -14,7 +14,13 @@
         <img src="{{options.logo}}" class="logo" />
         {% endif %}
         {% if title and author %}
-        <h1 id="painting-full-title">"{{title}}" {{options.di}} {{author}}</h1>
+        {% if options.di %}
+        <h1 class="painting-full-title">"{{title}}" {{options.di}} {{author}}</h1>
+        {% else %}
+        <h1 class="painting-full-title">{{author}}</h1>
+        <h1 class="painting-full-title">"{{title}}"</h1>
+        {% endif %}
+        
         {% elseif title %}
         <h1 id="painting-full-title">{{title}}</h1>
         {% else %}
