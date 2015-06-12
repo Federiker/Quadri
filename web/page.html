@@ -39,7 +39,9 @@
             <!-- #region painting magnifier -->
             <div class="painting">
                 <a class="magnifier-thumb-wrapper" id="thumb-container" target="_blank" href="#"></a>
+                {% if magnify %}
                 <div class="magnifier-preview heading" id="preview"></div>
+                {% endif %}
             </div>
             <!-- #endregion -->
         </article>
@@ -162,6 +164,7 @@
         {% endif %}
     </article>
     <!-- #endregion -->
+    {% if magnify %}
     <!-- #region outscript -->
     <script type="text/javascript">
         {{ EventScript|raw }}
@@ -179,4 +182,5 @@
         {{ MainScript|raw }}
     </script>
     <!-- #endregion -->
+    {% endif %}
 </div>
