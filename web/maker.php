@@ -54,7 +54,10 @@ catch (Exception $e) {
 $zip = new ZipArchive();
 $zip->open("public/ebay_{$n}.zip", ZipArchive::CREATE);
 
-$cont_w = CONT_W + ($magnify ? 0 : 120);
+$cont_w = CONT_W;
+if (!$magnify) {
+    $cont_w += 120;
+}
 $thumb = null;
 
 try {
@@ -101,12 +104,12 @@ $vals = array(
     "code" => $code,
     "img_url" => "'" . $url . "'",
     "img_thumb" => $thumb,
-    "EventScript" => $magnify ? file_get_contents("Event.min.js") : "",
-    "MagnifierScript" => $magnify ? file_get_contents("Magnifier.min.js") : "",
-    "PaintingScript" => $magnify ? file_get_contents("Paintings.min.js") : "",
-    "MainScript" => $magnify ? file_get_contents("mainscript.min.js") : "",
+    "EventScript" => file_get_contents("Event.min.js"),
+    "MagnifierScript" => file_get_contents("Magnifier.min.js"),
+    "PaintingScript" => file_get_contents("Paintings.min.js"),
+    "MainScript" => file_get_contents("mainscript.min.js"),
     "less" => $css,
-    "magcss" => $magnify ? file_get_contents("magnifier.min.css") : "",
+    "magcss" => file_get_contents("magnifier.min.css"),
     "options" => $options,
     "show_3d" => $show3d,
     "magnify" => $magnify
