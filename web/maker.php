@@ -19,13 +19,15 @@ $url = !(isset($_POST["url"]) && strlen(trim($_POST["url"])) != 0) ? "paintings/
 $author = !isset($_POST["author"]) ? "Autore" : trim($_POST["author"]);
 $width = !isset($_POST["width"]) ? 10 : filter_var(trim($_POST["width"]), FILTER_SANITIZE_NUMBER_INT);
 $height = !isset($_POST["height"]) ? 10 : filter_var(trim($_POST["height"]), FILTER_SANITIZE_NUMBER_INT);
-$depth = !isset($_POST["depth"]) ? 2 : filter_var(trim($_POST["depth"]), FILTER_SANITIZE_NUMBER_INT);;
+$depth = !isset($_POST["depth"]) ? 2 : filter_var(trim($_POST["depth"]), FILTER_SANITIZE_NUMBER_INT);
 $code = !isset($_POST["code"]) ? "" : trim($_POST["code"]);
 $ratio = 1;
 $norepet = !isset($_POST["repeat"]);
 $create = isset($_POST["create"]);
 $show3d = isset($_POST["show_3d"]);
 $magnify = isset($_POST["magnify"]);
+
+$backgroundAdd = (!isset($_POST["bck_size"]) ? 0 : filter_var(trim($_POST["bck_size"]), FILTER_SANITIZE_NUMBER_INT)) + 100;
 
 $options = new Options();
 try {
@@ -42,7 +44,8 @@ catch (Exception $e) {}
 
 $bckSize = "100%";
 if ($norepet) {
-    $bckSize = "105%";
+    //$bckSize = "105%";
+    $bckSize = $backgroundAdd . "%";
 }
 $n = time();
 clean_file_title($n, $title, $code);
@@ -99,7 +102,8 @@ try {
             "bck-size" => $bckSize, 
             "thumb-width" => $cont_w . "px",
             "total-width" => $body_w . "px",
-            "mag-url" => $mag
+            "mag-url" => $mag,
+            "depth" => (($depth / 2) * 0.5) . "em"
             )
         );
     $css = $parser->getCss();
